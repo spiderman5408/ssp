@@ -242,11 +242,11 @@ installssp(){
     makeExecutable ssp
 
     # Install ssp server config to /etc/ssp
-    if [[ ! -f "/etc/ssp/ssp.ini" ]]; then
+    if [[ ! -f "/etc/ssp/config.ini" ]]; then
         mkdir -p /etc/ssp
         mkdir -p /var/log/ssp
 
-		cp "${VSRC_ROOT}/ssp.ini" "/etc/ssp/"
+		cp "${VSRC_ROOT}/config.ini" "/etc/ssp/"
     fi
 
     return 0
@@ -373,12 +373,12 @@ main() {
     installssp || return $?
     installInitScript || return $?
 
-    sed -i "1s|YOUR_PANEL_TYPE|${panel_type:-v2board}|g" /etc/ssp/ssp.ini
-    sed -i "2s|https://www.domain.com|${webapi_url}|g" /etc/ssp/ssp.ini
-    sed -i "3s|webapi_key=\"\"|webapi_key=\"${webapi_key}\"|g" /etc/ssp/ssp.ini
-    sed -i "4s|1|${node_id:-1}|g" /etc/ssp/ssp.ini
-    sed -i "7s|poseidon_license=\"\"|poseidon_license=\"${poseidon_license}\"|g" /etc/ssp/ssp.ini
-    sed -i "9s|log_level=\"info\"|log_level=\"${log_level:-info}\"|g" /etc/ssp/ssp.ini
+    sed -i "1s|YOUR_PANEL_TYPE|${panel_type:-v2board}|g" /etc/ssp/config.ini
+    sed -i "2s|https://www.domain.com|${webapi_url}|g" /etc/ssp/config.ini
+    sed -i "3s|webapi_key=\"\"|webapi_key=\"${webapi_key}\"|g" /etc/ssp/config.ini
+    sed -i "4s|1|${node_id:-1}|g" /etc/ssp/config.ini
+    sed -i "7s|poseidon_license=\"\"|poseidon_license=\"${poseidon_license}\"|g" /etc/ssp/config.ini
+    sed -i "9s|log_level=\"info\"|log_level=\"${log_level:-info}\"|g" /etc/ssp/config.ini
 
     colorEcho ${GREEN} "ssp ${NEW_VER} is installed."
 
