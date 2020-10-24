@@ -32,7 +32,7 @@ bash <(curl -L https://bit.ly/3jyAijB)
 | node_id | 面板生成的节点 ID |
 | poseidon_license | 从作者处获得的授权码<br />（没有的话空着就行，空着表示使用社区版本|
 | speed_limit | 限速，单位 Mbps，0表示不限速 |
-| rule_url | 审计规则地址，推荐使用 https:// 这种远程文件，方便后续的更新 |
+| rule_url | 审计规则地址，推荐使用 https:// 这种远程文件，方便后续的更新，[文件内容示例](https://raw.githubusercontent.com/ColetteContreras/ssp/main/example-rules.txt)|
 | rule_mode | 审计模式，支持白名单`white` 黑名单`black` |
 | check_interval | 多久与面板交换一次信息（同步用户，上报流量等），默认 60 |
 | log_level | 日志级别，日志内容大小排序 `error` <= `warning` <= `info` |
