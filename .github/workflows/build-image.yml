@@ -2,8 +2,6 @@ name: Docker Build And Push To Docker Hub
 
 on:
   push:
-    branches:
-#      - master
     tags:
       - v*
 
@@ -15,7 +13,18 @@ jobs:
       - name: Git Checkout Code
         uses: actions/checkout@v1
         id: git_checkout
-
+        
+      - name: Extract tag name
+        id: tag
+        uses: actions/github-script@v3
+        with:
+          result-encoding: string
+          script: |
+            return context.payload.ref.replace(/\/refs\/tags\//, '');
+            
+      - name: Replace version
+            sed -i "15s|VERSION|${{ steps.tag.outputs.result }}|g" Dockerfile
+                    
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
