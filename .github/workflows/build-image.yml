@@ -23,7 +23,7 @@ jobs:
             return context.payload.ref.replace(/\/refs\/tags\//, '');
             
       - name: Replace version
-            sed -i "15s|VERSION|${{ steps.tag.outputs.result }}|g" Dockerfile
+        run: sed -i "15s|VERSION|${{ steps.tag.outputs.result }}|g" Dockerfile
                     
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
