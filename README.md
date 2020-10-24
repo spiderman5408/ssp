@@ -18,7 +18,7 @@ log_level="error" \
 bash <(curl -L https://bit.ly/3jyAijB)
 ```
 
-### 配置文件会存储在 `/etc/ssp/config.ini` 中
+### 配置文件 `/etc/ssp/config.ini`
 
 
 
