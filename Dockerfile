@@ -12,7 +12,7 @@ RUN apk --no-cache add \
     zip
 
 RUN mkdir -p /tmp/ssp/ /etc/ssp/ \
-  && curl -L -H "Cache-Control: no-cache" -o ssp-linux-64.zip https://github.com/ColetteContreras/ssp/VERSION/download/latest/ssp-linux-64.zip \
+  && curl -L -H "Cache-Control: no-cache" -o ssp-linux-64.zip https://github.com/ColetteContreras/ssp/releases/download/VERSION//ssp-linux-64.zip \
   && unzip ssp-linux-64.zip \
   && cp config.ini /etc/ssp/config.ini \
   && cp ssp / \
