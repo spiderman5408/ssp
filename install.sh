@@ -377,8 +377,12 @@ main() {
     sed -i "2s|https://www.domain.com|${webapi_url}|g" /etc/ssp/config.ini
     sed -i "3s|webapi_key=\"\"|webapi_key=\"${webapi_key}\"|g" /etc/ssp/config.ini
     sed -i "4s|1|${node_id:-1}|g" /etc/ssp/config.ini
+    sed -i "5s|check_interval=60|check_interval=${check_interval:-60}|g" /etc/ssp/config.ini 
     sed -i "7s|poseidon_license=\"\"|poseidon_license=\"${poseidon_license}\"|g" /etc/ssp/config.ini
-    sed -i "9s|log_level=\"info\"|log_level=\"${log_level:-info}\"|g" /etc/ssp/config.ini
+    sed -i "9s|log_level=\"info\"|log_level=\"${log_level:-error}\"|g" /etc/ssp/config.ini
+    sed -i "12s|speed_limit=0|speed_limit=${speed_limit:-0}|g" /etc/ssp/config.ini
+    sed -i "18s|rule_url=\"\"|rule_url=\"${rule_url}\"|g" /etc/ssp/config.ini
+    sed -i "21s|rule_mode=\"black\"|rule_mode=\"${rule_mode:-black}\"|g" /etc/ssp/config.ini
 
     colorEcho ${GREEN} "ssp ${NEW_VER} is installed."
 
