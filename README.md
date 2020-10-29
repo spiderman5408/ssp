@@ -98,30 +98,4 @@ docker run --restart=on-failure --name ssp -d --network host v2cc/ssp \
 | 用户限速 | √ | √  |
 | 审计 | √ | √ |
 
-### 商业授权
-
-<table>
-<tr>
-<th colspan="7">商业授权价格表</th>
-</tr>
-<tr>
-<td>人数限制</td><td colspan="2">最多 2000 人</td><td colspan="2">最多 6000 人</td><td colspan="2">无限制</td>
-</tr>
-<tr>
-<td>价格</td><td>USDT</td><td>人民币</td><td>USDT</td><td>人民币</td><td>USDT</td><td>人民币</td>
-</tr>
-<tr>
-<td>一年</td><td>65</td><td>455</td><td>130</td><td>910</td><td>200</td><td>1400</td>
-</tr>
-<tr>
-<td>两年</td><td>115</td><td>805</td><td>230</td><td>1610</td><td>330</td><td>2310</td>
-</tr>
-<tr>
-<td>三年</td><td>159</td><td>1113</td><td>310</td><td>2170</td><td>450</td><td>3150</td>
-</tr>
-<tr>
-<td>永久</td><td>220</td><td>1540</td><td>440</td><td>3080</td><td>660</td><td>4620</td>
-</tr>
-</table>
-
-授权版咨询、购买请联系[作者](https://t.me/ColetteContreras)（可找作者 PY 个一周的试用授权）
+[加入群组](https://t.me/v2ray_poseidon)
