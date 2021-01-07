@@ -1,5 +1,5 @@
 # 波塞冬 Shadowsocks
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　—— ssp (Shadowsocks-Poseidon)
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　—— ssp (Shadowsocks-Poseidon)
 
 Shadowsocks 单端口多用户，适配多种面板，内存占用极低 4k 有效用户占用 50MiB 内存。
 
