@@ -8,13 +8,15 @@
 # 4. 完整匹配：由 "full:" 开始，余下部分是一个域名。当此域名完整匹配目标域名时，该规则生效。
 #    例如 "full:v2ray.com" 匹配 "v2ray.com" 但不匹配 "www.v2ray.com"。
 # 5. 预定义域名列表：由 "geosite:" 开头，余下部分是一个名称，如 geosite:google 或者 geosite:cn。名称及域名列表参考 预定义域名列表。
-
+# 6. 协议：当前支持三种： tls, http, bittorrent
+#    例如 "protocol:bittorrent" 匹配BT协议
 
 # 轮子
 regexp:(.*.||)(dafahao|minghui|dongtaiwang|dajiyuan|falundata|shenyun|tuidang|epochweekly|epochtimes|ntdtv|falundafa|wujieliulan|zhengjian).(org|com|net)
 
 # BT
 regexp:(torrent|.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce.php?passkey=)
+protocol:bittorrent
 
 # 迅雷
 regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
