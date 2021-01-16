@@ -254,17 +254,9 @@ installssp(){
 
 
 installInitScript(){
-    if [[ -n "${SYSTEMCTL_CMD}" ]];then
-        if [[ ! -f "/etc/systemd/system/ssp.service" ]]; then
-            if [[ ! -f "/lib/systemd/system/ssp.service" ]]; then
-                cp "${VSRC_ROOT}/ssp.service" "/etc/systemd/system/"
-                cp "${VSRC_ROOT}/ssp@.service" "/etc/systemd/system/"
-                systemctl enable ssp.service
-            fi
-        fi
-        return
-    fi
-    return
+    cp "${VSRC_ROOT}/ssp.service" "/etc/systemd/system/"
+    cp "${VSRC_ROOT}/ssp@.service" "/etc/systemd/system/"
+    systemctl enable ssp.service
 }
 
 Help(){
