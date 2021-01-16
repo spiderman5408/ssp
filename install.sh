@@ -256,6 +256,7 @@ installssp(){
 installInitScript(){
     cp "${VSRC_ROOT}/ssp.service" "/etc/systemd/system/"
     cp "${VSRC_ROOT}/ssp@.service" "/etc/systemd/system/"
+    systemctl daemon-reload
     systemctl enable ssp.service
 }
 
