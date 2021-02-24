@@ -3,8 +3,6 @@
 
 Shadowsocks 单端口多用户，适配多种面板，内存占用极低 4k 有效用户占用 50MiB 内存。
 
-对接 SSPanel 面板康明宋
-
 ### 系统直接安装
 
 ```
@@ -72,9 +70,9 @@ docker run --restart=on-failure --name ssp -d --network host v2cc/ssp \
 
 | 参数 | 说明 |
 |------|-----|
-| panel_type | 面板类型，当前支持的值为 `proxypanel` `v2board` |
+| panel_type | 面板类型，当前支持的值为 `proxypanel` `v2board` `sspanel` |
 | webapi_url | webapi 的地址 `https://你的面板域名` |
-| webapi_key | ProxyPanel 为`节点通信密钥` |
+| webapi_key | `节点通信密钥` |
 | node_id | 面板生成的节点 ID |
 | poseidon_license | 从作者处获得的授权码<br />（没有的话空着就行，空着表示使用社区版本|
 | speed_limit | 限速，单位 Mbps，0表示不限速 |
@@ -98,7 +96,7 @@ docker run --restart=on-failure --name ssp -d --network host v2cc/ssp \
 | 支持用户数 | 88 | 与授权人数一致 |
 | ProxyPanel | √ | √ |
 | V2board v1.4.0+ | √ | √ |
-| SSPanel |√ | √ |
+| SSPanel (最新 dev 分支) |√ | √ |
 | 用户限速 | √ | √  |
 | 审计 | √ | √ |
 
